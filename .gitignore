@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 
 data/
+preprocessing/preprocessed_data_10x.joblib
+preprocessing/preprocessed_data_BS1.joblib
+preprocessing/preprocessed_data_BS2.joblib
+preprocessing/preprocessed_data_GEO.joblib
