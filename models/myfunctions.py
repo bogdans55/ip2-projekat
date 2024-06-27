@@ -51,8 +51,8 @@ def load_test(data, model, title, classes=['B', 'D', 'M', 'NK', 'T']):
     return y_pred
 
 def test_on_self(data, params, algorithm, title, classes=['B', 'D', 'M', 'NK', 'T']):
-    model = algorithm(**params, random_state=55)
-    X_train, X_test, y_train, y_test = train_test_split(data.drop(['Group'], axis=1), data['Group'], test_size=0.3, random_state=55)
+    model = algorithm(**params)
+    X_train, X_test, y_train, y_test = train_test_split(data.drop(['Group'], axis=1), data['Group'], test_size=0.3)
     model = build_model(model, X_train, X_test, y_train, y_test, title, classes=classes)
     return model.predict(data.drop(['Group'], axis=1))
 
